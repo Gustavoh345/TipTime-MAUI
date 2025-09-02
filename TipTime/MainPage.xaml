@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipTime.MainPage">
+
+    <VerticalStackLayout
+        BackgroundColor="YellowGreen">
+        <Label 
+            Text="Valor :"/>
+
+        <Entry
+            x:Name="ValorTotalEntry"
+            Placeholder="Digite o valor total da compra"/>
+
+        <HorizontalStackLayout>
+        <Label 
+            Text="Gorjeta:"
+            
+            />
+            
+        <Label 
+            Text="0.00"
+           
+            TextColor="Magenta"
+            x:Name="ValorGorjetaLabel"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+        <Label 
+            Text="Valor total: "/>
+
+        <Label 
+            Text="0.00"
+            TextColor="Magenta"
+            x:Name="ValorTotalLabel" />
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+        <Label 
+            Text="Porcentagem: "/>
+
+        <Label 
+            Text="15"
+            TextColor="Magenta"
+            x:Name="PorcentagemGorjetaBtn" />
+        </HorizontalStackLayout>
+
+        <Slider
+            x:Name="PorcentagemSlider"
+            Maximum="100"
+            Minimum="0"
+            ValueChanged="PorcentagemSlider_ValueChanged"/>
+
+        <HorizontalStackLayout
+            Padding="10"
+            >
+            <Button
+                x:Name="QuinzeBtn"
+                Text="15%"
+                SemanticProperties.Hint="Calcular 15%"
+                Clicked="QuinzeBtn_Clicked"/>
+
+            <Button
+                x:Name="VinteBtn"
+                Text="20%"
+                SemanticProperties.Hint="Calcular 20%"
+                Clicked="VinteBtn_Clicked"/>
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            Padding="10"
+            >
+            <Button
+                x:Name="RoundDownBtn"
+                Text="Round Down"
+                SemanticProperties.Hint="Arredondar valor para baixo"
+                Clicked="RoundDownBtn_Clicked"/>
+
+            <Button
+                x:Name="RoundUpBtn"
+                Text="Round Up"
+                SemanticProperties.Hint="Arredondar valor para cima"
+                Clicked="RoundUpBtn_Clicked"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
