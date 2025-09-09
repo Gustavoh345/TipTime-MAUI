@@ -27,7 +27,8 @@
         
         <HorizontalStackLayout>
         <Label 
-            Text="Valor total: "/>
+            Text="Valor final: "
+            x:Name="ValorFinalLabel"/>
 
         <Label 
             Text="0.00"
@@ -42,13 +43,14 @@
         <Label 
             Text="15"
             TextColor="Magenta"
-            x:Name="PorcentagemGorjetaBtn" />
+            x:Name="PorcentagemGorjeta" />
         </HorizontalStackLayout>
 
         <Slider
             x:Name="PorcentagemSlider"
             Maximum="100"
             Minimum="0"
+            Value="15"
             ValueChanged="PorcentagemSlider_ValueChanged"/>
 
         <HorizontalStackLayout
