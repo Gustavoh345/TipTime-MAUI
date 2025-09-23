@@ -27,7 +27,7 @@
         {
             PorcentagemSlider.Value = 15;
 
-
+            
         }
 
         private void VinteBtn_Clicked(object sender, EventArgs e)
@@ -37,12 +37,17 @@
 
         private void RoundDownBtn_Clicked(object sender, EventArgs e)
         {
+            
+
+
 
         }
 
         private void RoundUpBtn_Clicked(object sender, EventArgs e)
         {
-
+            decimal valorPorcentagem = Convert.ToDecimal(PorcentagemSlider.Value);
+            Math.Ceiling(valorPorcentagem);
+            return (valorPorcentagem);
         }
 
         private void PorcentagemSlider_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -57,6 +62,8 @@
                 ValorGorjetaLabel.Text = Gorjeta.ToString("c");
                 double ValorFinal = Gorjeta + ValorTotal;
                 ValorTotalLabel.Text = $"{ValorFinal}";
+                PorcentagemGorjetaLabel.Text = Convert.ToString(PorcentagemGorjetaLabel.Value);
+                
             }
 
             catch(Exception ex)
